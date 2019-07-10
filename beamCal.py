@@ -106,9 +106,9 @@ class BeamCal:
 		#imports based on options
 		if self.plotSample:
 			import matplotlib.pyplot as plt
-		if (self.beamProfile != "gauss") or self.plotSample:
-			from sympy.functions.special.delta_functions import Heaviside
-			from sympy.functions.special.gamma_functions import gamma
+		# if (self.beamProfile != "gauss") or self.plotSample:
+		# 	from sympy.functions.special.delta_functions import Heaviside
+		# 	from sympy.functions.special.gamma_functions import gamma
 		#basicConfig(format='%(asctime)s %(levelname)s : %(message)s', filename=self.logfile, level=self.loglevel)
 
 
