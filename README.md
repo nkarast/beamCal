@@ -1,5 +1,5 @@
 # beamCal
-A Python module for beam parameter calculations at (HL-)collisions
+A Python module for beam parameter calculations at (HL-)collisions. Based on the work of S. Fartoukh.
 
 ## Description
 Using the SciPy for numerical integration calculate the performance-related beam parameters (i.e. luminosity, luminous region, pileup etc) for a collider.
