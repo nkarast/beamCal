@@ -1079,9 +1079,8 @@ VRF0 				= {self.VRF0} 		# reference CC voltage for full crabbing at 590 murad c
 VRFx0 				= {self.VRFx0} 		# CC voltage [MV] in crossing plane for 2 CCs
 VRFy0 				= {self.VRFy0}		# default CC voltage [MV] in parallel plane
 Llevel0 			= {self.Llevel0}	# Default Level luminosity [10**34]
-alpha0 				= {self.alpha0} 	# Default full crossing angle
-
-		'''
+alpha0 				= {self.alpha0} 	# Default full crossing angle 
+''')
 
 #####################################################################################################################################################
 #
