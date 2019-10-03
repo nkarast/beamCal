@@ -539,7 +539,7 @@ class BeamCal:
 			for mx in x:
 				mlumi = self.myLumi(mb, mx, s)
 				lumi.append((mb*100., mx, mlumi))
-				debug("(%s\t%s\t%s)"% (mb*100., mx, mlumi))
+				print("(%s\t%s\t%s)"% (mb*100., mx, mlumi))
 
 		if outputFileName is not None:
 			np.savetxt(outputFileName, lumi, '%i\t%i\t%.6f')
@@ -581,7 +581,7 @@ class BeamCal:
 				self.setNpart0(mn)
 				mlumi = self.myLumi(b, mx, s, flattness=flattness)
 				lumi.append((mn*1.0e-11, mx, mlumi))
-				debug("(%s\t%s\t%s)"% (mn*1.0e-11, mx, mlumi))
+				print("(%s\t%s\t%s)"% (mn*1.0e-11, mx, mlumi))
 
 		if outputFileName is not None:
 			np.savetxt(outputFileName, lumi, '%.6f\t%i\t%.6f')
@@ -658,7 +658,7 @@ class BeamCal:
 			for mx in x:
 				mlumi = self.myLumi(b, mx, ms)
 				lumi.append((ms, mx, mlumi))
-				debug("(%s\t%s\t%s)"% (ms, mx, mlumi))
+				print("(%s\t%s\t%s)"% (ms, mx, mlumi))
 
 		if outputFileName is not None:
 			np.savetxt(outputFileName, lumi, '%.3f\t%i\t%.6f')
@@ -890,7 +890,7 @@ class BeamCal:
 			for mx in x:
 				mpz = self.myLumz(mb, mx, s)
 				pz.append((mb*100., mx, mpz))
-				debug("(%s\t%s\t%s)"% (mb*100., mx, mpz))
+				print("(%s\t%s\t%s)"% (mb*100., mx, mpz))
 
 		if outputFileName is not None:
 			np.savetxt(outputFileName, pz, '%i\t%i\t%.6f')
@@ -967,7 +967,7 @@ class BeamCal:
 			for mx in x:
 				mpz = self.myLumz(b, mx, ms)
 				pz.append((ms, mx, mpz))
-				debug("(%s\t%s\t%s)"% (ms, mx, mpz))
+				print("(%s\t%s\t%s)"% (ms, mx, mpz))
 
 		if (outputFileName is not None):
 			np.savetxt(outputFileName, pz, '%.3f\t%i\t%.6f')
