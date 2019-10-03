@@ -1034,17 +1034,15 @@ class BeamCal:
 
 	# - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - - * - -
 	def printConfig(self):
-		print(f'''
+		print('''
 ####################################################################################################
 #
 #	OPTIONS
 #
 ####################################################################################################
-beamProfile 			= {self.beamProfile} 		# Longutudinal bunch distributions as a function of z [m]
-plotSample 			= {self.plotSample} 		# Plot sample distributions
-logfile 			= {self.logfile} 		# Logfile name
-loglevel 			= {self.loglevel} 		# Loglevel - Write only output of level higher than
-						# 0: Not Set, 10: DEBUG, 20: INFO, 30: WARNING, 40: ERROR, 50: CRITICAL
+beamProfile 			= {} 		# Longutudinal bunch distributions as a function of z [m]
+plotSample 			= {} 		# Plot sample distributions
+logfile 			= {} 		# Logfile name
 
 ####################################################################################################
 #
@@ -1052,11 +1050,11 @@ loglevel 			= {self.loglevel} 		# Loglevel - Write only output of level higher t
 #
 ####################################################################################################
 
-Clight 				= {self.Clight}  		# speed of light [m/s]
-Qe 				= {self.Qe}  			# electron charge [C]
-sigprotoninelas 		= {self.sigprotoninelas}  	# inelastic hadron cross section [barn]
-sigtotproton 			= {self.sigtotproton}   	# inelastic hadron cross section [barn]
-Mproton 			= {self.Mproton}  		# proton mass [GeV]
+Clight 				= {}  		# speed of light [m/s]
+Qe 				= {}  			# electron charge [C]
+sigprotoninelas 		= {}  	# inelastic hadron cross section [barn]
+sigtotproton 			= {}   	# inelastic hadron cross section [barn]
+Mproton 			= {}  		# proton mass [GeV]
 
 ####################################################################################################
 #
@@ -1064,23 +1062,22 @@ Mproton 			= {self.Mproton}  		# proton mass [GeV]
 #				  SNAPSHOT AT THE BEGGINING AND END OF THE COAST
 #
 ####################################################################################################
-Nb0 				= {self.Nb0}		# number of collision at IP1 and IP5
-Npart0 				= {self.Npart0} 	# bunch charge at begining of coast
-Nrj0 				= {self.Nrj0} 		# collision energy [GeV]
-gamma0 				= {self.gamma0}		# relativisitc factor
-emitX0  			= {self.emitX0} 	# r.m.s. horizontal physical emittance in collision
-emitY0  			= {self.emitY0} 	# r.m.s. vertical physical emittance in collision
-circum 				= {self.circum} 	# ring circumference [m]
-sigz0				= {self.sigz0} 		# default r.m.s. bunch length [m]
-frev0 				= {self.frev0}		# LHC revolution frequency at flat top
-hrf400 				= {self.hrf400} 	# LHC harmonic number for 400 Mhz
-omegaCC0 			= {self.omegaCC0} 	# default omega/c for 400 MHz crab-cavities
-VRF0 				= {self.VRF0} 		# reference CC voltage for full crabbing at 590 murad crossing angle
-VRFx0 				= {self.VRFx0} 		# CC voltage [MV] in crossing plane for 2 CCs
-VRFy0 				= {self.VRFy0}		# default CC voltage [MV] in parallel plane
-Llevel0 			= {self.Llevel0}	# Default Level luminosity [10**34]
-alpha0 				= {self.alpha0} 	# Default full crossing angle 
-''')
+Nb0 				= {}	# number of collision at IP1 and IP5
+Npart0 				= {:.3e}	# bunch charge at begining of coast
+Nrj0 				= {}	# collision energy [GeV]
+gamma0 				= {:.3f}	# relativisitc factor
+emitX0  			= {:.3e}	# r.m.s. horizontal physical emittance in collision
+emitY0  			= {:.3e}	# r.m.s. vertical physical emittance in collision
+circum 				= {}	# ring circumference [m]
+sigz0				= {}	# default r.m.s. bunch length [m]
+frev0 				= {:.3f}	# LHC revolution frequency at flat top
+hrf400 				= {}	# LHC harmonic number for 400 Mhz
+omegaCC0 			= {:.3f}	# default omega/c for 400 MHz crab-cavities
+VRF0 				= {}	# reference CC voltage for full crabbing at 590 murad crossing angle
+VRFx0 				= {}	# CC voltage [MV] in crossing plane for 2 CCs
+VRFy0 				= {}	# default CC voltage [MV] in parallel plane
+Llevel0 			= {}	# Default Level luminosity [10**34]
+alpha0 				= {}	# Default full crossing angle [urad]'''.format(self.beamProfile, self.plotSample, self.logfile, self.Clight, self.Qe, self.sigprotoninelas, self.sigtotproton, self.Mproton, self.Nb0, self.Npart0, self.Nrj0, self.gamma0, self.emitX0, self.emitY0, self.circum, self.sigz0, self.frev0, self.hrf400, self.omegaCC0, self.VRF0, self.VRFx0, self.VRFy0, self.Llevel0, self.alpha0*1.0e6))
 
 #####################################################################################################################################################
 #
